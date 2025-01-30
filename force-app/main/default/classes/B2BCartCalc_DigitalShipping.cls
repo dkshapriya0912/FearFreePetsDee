@@ -84,26 +84,11 @@ public class B2BCartCalc_DigitalShipping extends CartExtension.ShippingCartCalcu
             CartExtension.CartDeliveryGroupMethod cartDeliveryGroupMethod01 = new CartExtension.CartDeliveryGroupMethod('Shipping Charge', calculatedShipping, shippingProduct);
             cartDeliveryGroupMethod01.setCarrier('USPS');
             cartDeliveryGroupMethod01.setClassOfService('Digital Shipping');
-            CartExtension.CartDeliveryGroupMethod cartDeliveryGroupMethod02 = new CartExtension.CartDeliveryGroupMethod('FedEX Priority (PM Delivery)', calculatedShipping, shippingProduct);
-            cartDeliveryGroupMethod01.setCarrier('Fedex');
-            cartDeliveryGroupMethod01.setClassOfService('Digital Shipping'); 
-            CartExtension.CartDeliveryGroupMethod cartDeliveryGroupMethod03 = new CartExtension.CartDeliveryGroupMethod('FedEX 2nd Day', calculatedShipping, shippingProduct);
-            cartDeliveryGroupMethod01.setCarrier('Fedex');
-            cartDeliveryGroupMethod01.setClassOfService('Digital Shipping');
-            CartExtension.CartDeliveryGroupMethod cartDeliveryGroupMethod04 = new CartExtension.CartDeliveryGroupMethod('FedEX Ground', calculatedShipping, shippingProduct);
-            cartDeliveryGroupMethod01.setCarrier('Fedex');
-            cartDeliveryGroupMethod01.setClassOfService('Digital Shipping');
 
             cartDeliveryGroupMethods.add(cartDeliveryGroupMethod01);
-            cartDeliveryGroupMethods.add(cartDeliveryGroupMethod02);
-            cartDeliveryGroupMethods.add(cartDeliveryGroupMethod03);
-            cartDeliveryGroupMethods.add(cartDeliveryGroupMethod04);
 
             // Set the delivery method ID that will be used for the order summary
             cartDeliveryGroup.setDeliveryMethodId(cartDeliveryGroupMethod01.getId());
-            cartDeliveryGroup.setDeliveryMethodId(cartDeliveryGroupMethod02.getId());
-            cartDeliveryGroup.setDeliveryMethodId(cartDeliveryGroupMethod03.getId());
-            cartDeliveryGroup.setDeliveryMethodId(cartDeliveryGroupMethod04.getId());
         }
     }
 }
